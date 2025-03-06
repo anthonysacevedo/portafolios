@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gugi&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
+
+html, body {
+    scrollbar-width: none;
+    max-height: auto;
+}
+
+.menu {
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    background-image: url('imagen0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    
+}
+
+
+
+.menu a {
+    z-index: 1;
+    padding-left: 16px;
+    text-decoration: none;
+    color: white;
+    font-family:"BIZ UDPGothic", sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-left: 10%;
+    display: block;
+    width: 0;
+}
+
+.menu a:hover {
+    color:rgb(63, 62, 62);
+}
+
+
