@@ -12,26 +12,79 @@
         
             <div class="row">
 
-                <div class="col-12 menu">
-                    <a href="#fotografia" id="photo">Fotografia</a>
-                    <a href="#tipografico" id="typo">Tipografico</a>
-                    <a href="#desarrollo" id="dev">Desarrollo</a>
+                <div class="fondos">
+
+                    
+                    <!--Saludos-->
+                    <div class="col-2 saludo">
+                        <h2>Hola, soy <br>Anthony</h2>
+                        <input type="text" id="nombre" class="nombre mb-3" placeholder="Dime tu nombre...">
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dime tu pronombre
+                              </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" data-value="masculino" href="#">ÉL</a>
+                              <a class="dropdown-item" data-value="femenino" href="#">Ella</a>
+                              <a class="dropdown-item" data-value="noBinario" href="#">No binario</a>
+                            </div>
+                          </div>
+
+                    </div>
+
+                    <!--menu-->
+                    <div class="submenu">
+                        <a href="#sobreMi">Sobre mi</a>
+                        <a href="#contacto">Contacto</a>
+                        <a href="#linkedIn">LinkedIn</a>
+
+                    </div>
+
+
+                    <div class="col-10 menu">
+                        
+                        <a href="#fotografia" id="photo">Fotografia</a>
+                        <a href="#tipografico" id="typo">Tipografico</a>
+                        <a href="#desarrollo" id="dev">Desarrollo</a>
+                    </div>
                 </div>
+            </div>
+
+        
+            <!--presentacion-->
+            
+            <div class="row bg-black">
+                <div class="col-6 bg-black bienvenida" id="bienvenida">
+                    
+                </div>
+                <div class="col-6 bg-black presentacion">
+                    <p>Un placer saludarte!</p>
+                    <p>Soy estudiante avanzado de la Licenciatura en Diseño de 
+                        Comunicación Visual. Tengo gran interés en el diseño UX/UI (actualmente
+                        me encuentro formándome dentro de este sector), el desarrollo web y la fotografía.
+                    </p>
+                    <p>En esta web podrás encontrar algunos trabajos realizados dentro del ámbito educativo, 
+                        que hablan un poco acerca de mi recorrido en el campo del diseño, como estudiante y futuro
+                        profesional. Espero lo disfrutes!
+                    </p>
+                    
+
+                </div>
+
             </div>
 
             <div class="row">
-                <div class="col-12">
-                    <p>Texto de ejemplo en donde explico quien soy y que hago ademas de dar
-                        algunos datosrelevantes, ademas en esta zona van los trabajos 
-                    </p>
+                <div class="col-12 fotografia">
 
                 </div>
 
             </div>
+        </div>
       
          
-            </div>
-    </div>
+           
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="init.js"></script>

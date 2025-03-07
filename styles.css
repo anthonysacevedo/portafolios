@@ -3,23 +3,118 @@
 html, body {
     scrollbar-width: none;
     max-height: auto;
+    overflow-x: hidden;
+    
 }
 
-.menu {
+.fondos {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    max-width: 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, black 100%), 
+    url('imagen0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+
+
+.submenu {
+    position: absolute; /* Permite posicionarlo sin afectar otros elementos */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Lo alinea a la derecha */
+    display: flex;
+    gap: 15px; /* Espaciado entre los enlaces */
+    z-index: 10; /* Asegura que se mantenga sobre otros elementos */
+}
+
+.submenu a {
+    color: white;
+    font-family: "BIZ UDPGothic", sans-serif;
+    font-size: 10pt;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.submenu a:hover {
+    color: grey;
+}
+
+
+.saludo {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 5%;
+    color: white;
+    font-family: "BIZ UDPGothic", sans-serif;
+}
+
+.saludo input {
+    width: 80%;
+    font-style: italic;
+    font-size: 12pt;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.253);
+    border: solid 0.5px white;
+    border-radius: 5px;
+}
+
+.saludo input::placeholder {
+    color: white;
+    font-size: 12pt;
+}
+
+.saludo .dropdown button {
+    font-size: 12pt;
+    
+}
+
+
+.dropdown-toggle {
+    border: none !important;
+    background: none !important;
+    color: inherit; /* Hereda el color del texto del contenedor */
+    padding: 0 !important; /* Opcional: reduce el padding si es necesario */
+    font-size: inherit; /* Mantiene el tamaño de la fuente */
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:active {
+    outline: none !important;
+    box-shadow: none !important; /* Evita el resplandor azul al hacer clic */
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.253) !important;
+    border-radius: none !important;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+.dropdown-menu a:hover {
+    color: grey;
+}
+
+
+
+.menu {
+    
     height: 100vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    background-image: url('imagen0.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
     
 }
-
 
 
 .menu a {
@@ -29,14 +124,52 @@ html, body {
     color: white;
     font-family:"BIZ UDPGothic", sans-serif;
     font-weight: bold;
-    font-size: 12pt;
-    margin-left: 10%;
+    font-size: 14pt;
+    margin-left: 3%;
     display: block;
     width: 0;
 }
 
 .menu a:hover {
     color:rgb(63, 62, 62);
+}
+
+
+.bienvenida {
+    color: white;
+    font-family: "BIZ UDPGothic", sans-serif;
+    padding-top: 5%;
+    margin: auto;
+    justify-content: right;
+    display: flex;
+    justify-content: flex-end; 
+    
+
+}
+
+.bienvenida h2 {
+    padding-right: 10%;
+}
+
+.presentacion {
+    color: white;
+    font-family: "BIZ UDPGothic", sans-serif;
+    font-size: 10pt;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+.presentacion p {
+    width: 60%;
+}
+
+
+.fotografia {
+    max-width: 100%;
+    height: 80vh;
+    background-color: rgb(24, 24, 24);
+
 }
 
 
