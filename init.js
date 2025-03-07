@@ -6,8 +6,52 @@ const nombre = document.getElementById('nombre');
 const bienvenida = document.getElementById('bienvenida');
 const dropDown = document.querySelector('.dropdown-menu');
 
+
 let generoSeleccionado = "Bienvenido/a"; // Variable global para almacenar el género
 let nombreUsuario = ""; // Variable para almacenar el nombre
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".galery-item img"); // Selecciona todas las imágenes dentro de .galery
+    const modal = new bootstrap.Modal(document.getElementById("exampleModal")); // Inicializa el modal de Bootstrap
+    const modalImgContainer = document.getElementById("modalContent"); // Contenedor del modal
+    const modalTitle = document.getElementById("exampleModalLabel"); // Título del modal
+
+    images.forEach((img) => {
+        img.addEventListener("click", function () {
+            // Limpiar contenido anterior del modal
+            modalImgContainer.innerHTML = "";
+
+            // Crear la imagen ampliada dentro del modal
+            const modalImg = document.createElement("img");
+            modalImg.src = this.src;
+            modalImg.alt = "Imagen ampliada";
+            modalImg.classList.add("img-fluid", "w-100"); // Hace que la imagen sea responsiva
+            
+            // Crear el botón de descarga
+            const downloadBtn = document.createElement("a");
+            downloadBtn.href = this.src;
+            downloadBtn.download = this.src.split("/").pop(); // Nombre del archivo
+            downloadBtn.classList.add("btn", "btn-primary", "mt-3");
+            downloadBtn.textContent = "Descargar Imagen";
+
+            // Agregar la imagen y el botón al modal
+            modalImgContainer.appendChild(modalImg);
+            modalImgContainer.appendChild(downloadBtn);
+
+            // Asignar título al modal (puedes cambiarlo dinámicamente)
+            modalTitle.textContent = "Vista previa de la imagen";
+
+            // Mostrar el modal
+            modal.show();
+        });
+    });
+});
+
+   
+    
+   
+ 
+
 
 // Función para cambiar imagen de fondo en el menú
 function cambiarFondo(variable, imagen0, imagen1) {
@@ -52,18 +96,32 @@ function genero() {
             e.preventDefault(); // Evita que el enlace recargue la página
             
             let opcion = this.getAttribute('data-value');
+            let valor=""
 
             if (opcion === 'masculino') {
                 generoSeleccionado = "Bienvenido";
+                valor = nombre.value;
+                nombreUsuario = valor; // Almacena el nombre ingresado
+                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+            
                 bienvenida.scrollIntoView({behavior: "smooth"});
             } else if (opcion === 'femenino') {
                 generoSeleccionado = "Bienvenida";
+                valor = nombre.value;
+                nombreUsuario = valor; // Almacena el nombre ingresado
+                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
                 bienvenida.scrollIntoView({behavior: "smooth"});
             } else if (opcion === 'noBinario') {
                 generoSeleccionado = "Bienvenide";
+                valor = nombre.value;
+                nombreUsuario = valor; // Almacena el nombre ingresado
+                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
                 bienvenida.scrollIntoView({behavior: "smooth"});
             } else {
                 generoSeleccionado = "Bienvenido/a";
+                valor = nombre.value;
+                nombreUsuario = valor; // Almacena el nombre ingresado
+                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
                 bienvenida.scrollIntoView({behavior: "smooth"});
             }
 
