@@ -7,6 +7,9 @@ html, body {
     
 }
 
+body {
+    background-image: url(fondopapel.png);
+}
 .fondos {
     position: relative;
     display: flex;
@@ -158,22 +161,32 @@ html, body {
 }
 
 .bienvenida h2 {
-    padding-right: 10%;
+    
+    font-size: 40pt;
 }
 
 .presentacion {
     color: white;
     font-family: "BIZ UDPGothic", sans-serif;
-    font-size: 10pt;
+    font-size: 11pt;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
+    padding-top: 14%;
+   
+
 
 }
 
-.presentacion p {
-    width: 60%;
+.ancho-de-linea {
+    width: 62%; 
+    border: solid 0.25px white;
+    padding: 16px;
 }
 
+.ancho-de-linea p {
+    hyphens: auto;
+    text-wrap: balance;
+}
 
 .fotografia h3{
     color: white;
@@ -190,6 +203,7 @@ html, body {
     margin: 0 auto;
     padding: 1rem; 
     grid-auto-flow: dense;
+    padding-bottom: 5%;
   }
   
   .galery-item {
@@ -232,4 +246,24 @@ html, body {
   .btndownload {
     background-color: none !important;
     border: solid 0.5px white;
+  }
+
+
+  .tipografia {
+    height: 100vh;
+    
+  }
+
+  .seccion-tipografia {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+  .seccion-tipografia h3 {
+    border-bottom: solid 0.25px rgb(54, 54, 54);
+    padding: 5px;
+    width: 60%;
+   
   }

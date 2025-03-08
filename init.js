@@ -81,7 +81,7 @@ function obtenerNombre(dato) {
         if(event.key === "Enter") {
             let valor = dato.value;
             nombreUsuario = valor; // Almacena el nombre ingresado
-            bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+            bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer <br>saludarte!</h2>`;
             
         }
     });
@@ -102,34 +102,35 @@ function genero() {
                 generoSeleccionado = "Bienvenido";
                 valor = nombre.value;
                 nombreUsuario = valor; // Almacena el nombre ingresado
-                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+                bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer <br>saludarte!</h2>`;
             
                 bienvenida.scrollIntoView({behavior: "smooth"});
             } else if (opcion === 'femenino') {
                 generoSeleccionado = "Bienvenida";
                 valor = nombre.value;
                 nombreUsuario = valor; // Almacena el nombre ingresado
-                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+                bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer <br>saludarte!</h2>`;
                 bienvenida.scrollIntoView({behavior: "smooth"});
             } else if (opcion === 'noBinario') {
                 generoSeleccionado = "Bienvenide";
                 valor = nombre.value;
                 nombreUsuario = valor; // Almacena el nombre ingresado
-                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+                bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer <br>saludarte!</h2>`;
                 bienvenida.scrollIntoView({behavior: "smooth"});
             } else {
                 generoSeleccionado = "Bienvenido/a";
                 valor = nombre.value;
                 nombreUsuario = valor; // Almacena el nombre ingresado
-                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+                bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer <br>saludarte!</h2>`;
                 bienvenida.scrollIntoView({behavior: "smooth"});
             }
 
             // No sobreescribir el nombre, solo actualizar el género
             if (nombreUsuario) {
-                bienvenida.innerHTML = `<h2>${generoSeleccionado}</br>${nombreUsuario}</h2>`;
+                bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer <br>saludarte!</h2>`;
+                
             } else {
-                bienvenida.innerHTML = `<h2>${generoSeleccionado}</h2>`;
+                bienvenida.innerHTML = `<h2><b>${generoSeleccionado}<br>${nombreUsuario}</b><br><br>¡Un placer<br> saludarte!</h2>`;
             }
         });
     });
