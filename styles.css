@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gugi&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
+@font-face {
+    font-family: Rinaldi;
+    src: url(A11_FuuenteRINALDI_entrega_M3.otf);
+}
+
 
 html, body {
     scrollbar-width: none;
     max-height: auto;
-    overflow-x: hidden;
+    box-sizing: border-box
     
 }
 
-body {
-    background-image: url(fondopapel.png);
-}
+
+
+
 .fondos {
     position: relative;
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, black 100%), 
     url('imagen0.jpg');
@@ -59,7 +64,7 @@ body {
 
 
 .saludo {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -121,7 +126,7 @@ body {
 
 .menu {
     
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -249,21 +254,82 @@ body {
   }
 
 
-  .tipografia {
-    height: 100vh;
+  
+
+
+
+
+
+  .seccion-tipografia {
+    background-image: url(tipografia/rinaldi.png);
+    background-position: center;
     
   }
 
-  .seccion-tipografia {
-    padding-top: 5%;
+
+
+  .seccion-tipografia .categoria {
+    color: white;
+    font-size: 20pt;
+
+  }
+
+
+  .container-parallax {
+    height: 100vh;
+    display: flex; 
+    flex-direction: flex;
+    overflow: hidden;
+  }
+
+
+ .titulo-tipografia {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
+ }
+
+  .titulo-tipografia h3 {
+    color: white;
+    font-size: 40pt;
+    font-weight: bolder;
+    width:60%;
+    font-family: "BIZ UDPGothic", sans-serif;
+    position: relative;
+    transition: transform 0.1s linear;
+
+  }
+
+
+  .texto-tipografia {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .texto-tipografia p{
+    padding-top: 30%;
+    color: white;
+    width: 50%;
+    align-self: center;
+    
+  }
+
+
+.seccion-tipografia2 {
+    display: flex;
     justify-content: center;
 }
 
-  .seccion-tipografia h3 {
-    border-bottom: solid 0.25px rgb(54, 54, 54);
-    padding: 5px;
-    width: 60%;
+  .banners {
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+    padding: 0 !important;
+
    
   }
+
+.seccion-tipografia2 .banners img {
+    width: 100%;
+    height: auto;
+    
+}
+/* Estilo para el contenedor parallax */

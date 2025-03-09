@@ -140,3 +140,25 @@ function genero() {
 // Llamar funciones
 genero();
 obtenerNombre(nombre);
+
+
+window.addEventListener("scroll", function () {
+    let containerParallax = document.querySelector(".container-parallax");
+    let elemento1 = document.getElementById("titulo-parallax");
+    let elemento2 = document.getElementById('texto-tipografia');
+
+    if (!containerParallax || !elemento1 || !elemento2) return; // Asegura que los elementos existen
+
+    let rect = containerParallax.getBoundingClientRect();
+    let windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight && rect.bottom > 0) {
+        // Desplazamiento para el título (movimiento más rápido)
+        let desplazamientoTitulo = Math.min(-rect.top * 0.8, containerParallax.clientHeight * 0.5); 
+        elemento1.style.transform = `translateY(${-desplazamientoTitulo}px)`;
+
+        // Desplazamiento para el texto (desfase más lento)
+        let desplazamientoTexto = Math.min(-rect.top * 0.4, containerParallax.clientHeight * 0.5); 
+        elemento2.style.transform = `translateY(${-desplazamientoTexto}px)`;
+    }
+});
